@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-var count = 0
 
 
 
@@ -29,18 +28,20 @@ class TimerClass: ObservableObject{
             timerMethod = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true)
             {timer in
                 self.count+=1
+               
                 //クロージャ内部では、selfがプロパティを使う上で必ず必要
                 self.nowMinutes = self.count/60
                 self.nowSeconds = self.count%60
                 
-                if self.count > 60*1 && {
+                if self.count >= 25*1 && self.rest==false{
                     self.count = 0;
                     self.rest = true
                 }
                 
-                if(self.rest == true && self.count>60*1){
+                if self.rest == true && self.count>=5*1{
                     self.nowSet += 1
                     self.count = 0
+                    self.rest = false
                 }
             }
         
