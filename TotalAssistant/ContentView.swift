@@ -17,17 +17,39 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            
             let minutesStr = String(timerClass.nowMinutes)
             let secondsStr =
                 String(timerClass.nowSeconds)
+            Text("ポモドーロタイマー")
+                .font(.largeTitle)
+                /*位置変えない*/
+                .padding()
+                .foregroundColor(.white)
+                
+            Text("<解説>")
+                .foregroundColor(.white)
+            Text("20分の集中と5分の休憩で、\n集中力を維持します")
+                
+                .foregroundColor(.white)
+                .multilineTextAlignment(.center)
+            
             Text(minutesStr + ":" + secondsStr)
+                /*なぜかframeを冒頭にしないといけない*/
+                .frame(maxWidth: .infinity)
                 .font(.largeTitle)
                 .padding()
-            Text("現在のセット数　\(timerClass.nowSet)")
+                .foregroundColor(.black)
+                .background(Color.white)
+             
                 .padding()
+            
+            Text("現在のセット数　\(timerClass.nowSet)")
+                
+                .foregroundColor(.white)
             Image("tomato")
                 .resizable()
-                .frame(width:300,height:300)
+                .frame(width:200,height:200)
                 .padding()
             
             HStack {
@@ -41,7 +63,9 @@ struct ContentView: View {
                 }
                 .disabled(isDisabled)
                 .padding()
-                
+                .background(Color.white)
+                .padding()
+                .foregroundColor(.black)
                 Button(action:{
                     isStopped = true
                     timerClass.StopTimer(stoppedTimer:true)
@@ -50,11 +74,31 @@ struct ContentView: View {
                     Text("一時停止")
                 }
                 .disabled(isStopped)
-                
+                .padding()
+                .background(Color.white)
+                .padding()
+                .foregroundColor(.black)
                 
             }
+            
+            /*
+            HStack{
+                Button(action:{
+                    
+                }){
+                    Text("TOP")
+                }
+                Button(action:{
+                    
+                }){
+                    Text("タイマー")
+                }
+            }
+             */
         }
-        .padding()
+        .frame(maxWidth: .infinity)
+        .frame(maxHeight: .infinity)
+        .background(Color.black)
         
     
     }
