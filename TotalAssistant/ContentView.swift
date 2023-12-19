@@ -12,92 +12,39 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @ObservedObject var timerClass = TimerClass()
-    
-    //＠Stateをつけているので構造体の中でも数値を変換できる
-    @State var isMoving = false
+    @State var menuContents = ["トップ","集中系","計画系","設定"]
     
     var body: some View {
         VStack(spacing:0){
             HStack{
-                Text("ポモドーロタイマー")
+                Text("ホーム")
                     .font(.title)
                 
             }
             .frame(maxWidth: .infinity)
-            .frame(height: 100)
+            .frame(height:100)
             .background(Color.green)
-            
+            .multilineTextAlignment(.center)
+            .font(.title)
             
             VStack{
-                Text("<解説>\nポモドーロタイマーは２５分の集中タイムと５分の休憩のセットからなる集中力UPのメソッドです。")
+                Text("マインドヘルパーへようこそ\nマインドヘルパーはADHDHを抱える方に寄り添うツールアプリです。\n下記のメニューより、複数のツールを利用することができます。")
                     .frame(maxWidth:300)
-                let minutesStr = String(timerClass.nowMinutes)
-                let secondsStr =
-                String(timerClass.nowSeconds)
-                
-                /*
-                 .frame(maxWidth: .infinity)
-                 .background(Color.red)
-                 
-                 
-                 
-                 /*位置変えない*/
-                 .background(Color.white)
-                 .padding()
-                 .foregroundColor(.black)
-                 */
-                
-                
-                
-                Text(minutesStr + ":" + secondsStr)
-                /*なぜかframeを冒頭にしないといけない*/
-                    .frame(maxWidth: .infinity)
-                    .font(.largeTitle)
                     .padding()
-                    .foregroundColor(.black)
-                    .background(Color.white)
-                    .padding()
-                    
                 
-                Text("現在のセット数　\(timerClass.nowSet)")
-                
-                    .foregroundColor(.black)
-                Image("tomato")
+                Image("brain")
                     .resizable()
                     .frame(width:200,height:200)
                     .padding()
+    
+                /*
+                必要ならつける（上部にくっつける）
+                Spacer()
+                */
                 
-                HStack {
-                    
-                    Button(action:{
-                        timerClass.ProcessTimer(stopped: false)
-                        isMoving = true
-                    }){
-                        Text("スタート")
-                        
-                    }
-                    .disabled(isMoving)
-                    .padding()
-                    .background(isMoving ? Color.gray : Color.pink)
-                    .padding()
-                    .foregroundColor(isMoving ? Color.black : Color.white)
-                    
-                    Button(action:{
-                        timerClass.StopTimer(stoppedTimer:true)
-                        isMoving = false
-                    }){
-                        Text("一時停止")
-                    }
-                    .disabled(!isMoving)
-                    .padding()
-                    .background(isMoving ? Color.blue : Color.gray)
-                    .padding()
-                    .foregroundColor(.white)
+                HStack(){
                     
                 }
-            
-                
                 
             }
             .frame(maxWidth: .infinity)
