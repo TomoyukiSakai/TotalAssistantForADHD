@@ -7,13 +7,21 @@
 
 import SwiftUI
 
+
 struct TimerPage: View {
     @ObservedObject var timerClass = TimerClass()
     
     //＠Stateをつけているので構造体の中でも数値を変換できる
     @State var isMoving = false
     
+    
+    
     var body: some View {
+        
+        
+        
+        
+        
         VStack(spacing:0){
             HStack{
                 Text("ポモドーロタイマー")
@@ -67,7 +75,7 @@ struct TimerPage: View {
                 HStack {
                     
                     Button(action:{
-                        timerClass.ProcessTimer(stopped: false)
+                        timerClass.ProcessTimer()
                         isMoving = true
                     }){
                         Text("スタート")

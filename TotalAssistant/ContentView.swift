@@ -12,7 +12,6 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State var menuContents = ["トップ","集中系","計画系","設定"]
     
     var body: some View {
         VStack(spacing:0){
@@ -52,7 +51,9 @@ struct ContentView: View {
             .background(Color.yellow)
             
             
+            var menuIndex = 0
             HStack{
+                
                 
                 Button(action:{
                     
