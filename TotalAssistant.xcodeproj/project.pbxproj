@@ -17,6 +17,7 @@
 		8EA1BCFA2B31FD5900B6C4D5 /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1BCF92B31FD5900B6C4D5 /* Plan.swift */; };
 		8EA1BCFC2B31FD6400B6C4D5 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1BCFB2B31FD6400B6C4D5 /* Setting.swift */; };
 		8EA1BCFE2B3204D200B6C4D5 /* transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA1BCFD2B3204D200B6C4D5 /* transition.swift */; };
+		8EF69C052B4AFD4600704BCA /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF69C042B4AFD4600704BCA /* FooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		8EA1BCF92B31FD5900B6C4D5 /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
 		8EA1BCFB2B31FD6400B6C4D5 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		8EA1BCFD2B3204D200B6C4D5 /* transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transition.swift; sourceTree = "<group>"; };
+		8EF69C042B4AFD4600704BCA /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		8E6BC8512B1F690800061DC8 /* TotalAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				8EF69C042B4AFD4600704BCA /* FooterView.swift */,
 				8EA1BCFD2B3204D200B6C4D5 /* transition.swift */,
 				8E6BC8522B1F690800061DC8 /* TotalAssistantApp.swift */,
 				8E6BC8542B1F690800061DC8 /* ContentView.swift */,
@@ -158,6 +161,7 @@
 				8EA1BCF62B31E2DE00B6C4D5 /* TimerPage.swift in Sources */,
 				8E6BC8612B1F822900061DC8 /* timer.swift in Sources */,
 				8EA1BCFA2B31FD5900B6C4D5 /* Plan.swift in Sources */,
+				8EF69C052B4AFD4600704BCA /* FooterView.swift in Sources */,
 				8EA1BCF82B31FD4700B6C4D5 /* Concentrate.swift in Sources */,
 				8EA1BCFC2B31FD6400B6C4D5 /* Setting.swift in Sources */,
 				8E6BC8552B1F690800061DC8 /* ContentView.swift in Sources */,

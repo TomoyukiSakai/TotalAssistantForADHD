@@ -7,9 +7,36 @@
 
 import SwiftUI
 
+struct ItemConcentrate{
+    let displayText: String
+    let destinationView: AnyView
+}
+
 struct Concentrate: View {
+    
+    
+    private let itemsConcentrate = [
+        ItemConcentrate(displayText: "ポモドーロタイマー", destinationView:AnyView(TimerPage()))
+    ]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView(){
+            VStack {
+                List{
+                    ForEach(itemsConcentrate,id:\.displayText){
+                        item in
+                        NavigationLink(destination:item.destinationView,label:{Text(item.displayText)}
+                            
+                        )
+                        
+                    }
+                }
+                .navigationBarTitle("集中ツール")
+                FooterView()
+            }
+            
+        }
+        
     }
 }
 
