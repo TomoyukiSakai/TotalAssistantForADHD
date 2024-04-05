@@ -113,7 +113,8 @@ struct TimerPage: View {
                 
             }.edgesIgnoringSafeArea(.bottom)
             
-        }
+            
+        }.navigationBarBackButtonHidden()
     }
 }
 

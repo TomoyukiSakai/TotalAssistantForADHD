@@ -22,8 +22,12 @@ struct ContentView: View {
         NavigationView(){
             VStack(spacing:0){
                 HStack{
+                    
                     Text("ホーム")
                         .font(.title)
+                        .padding()
+                    Spacer()
+                    
                     
                 }
                 .frame(maxWidth: .infinity)
@@ -33,14 +37,23 @@ struct ContentView: View {
                 .font(.title)
                 
                 VStack{
+                    
+                    
                     Text("マインドヘルパーへようこそ\nマインドヘルパーはADHDHを抱える方に寄り添うツールアプリです。\n下記のメニューより、複数のツールを利用することができます。")
                         .frame(maxWidth:300)
                         .padding()
+                     
+                    
+                        /*
+                        .navigationBarTitle("ホーム",displayMode: .inline)
+                        */
+                     
                     
                     Image("brain")
                         .resizable()
                         .frame(width:200,height:200)
                         .padding()
+                    
 
                     /*
                     必要ならつける（上部にくっつける）
@@ -58,6 +71,7 @@ struct ContentView: View {
                 }
             
             }
+            .navigationBarBackButtonHidden()
             .edgesIgnoringSafeArea(.bottom)
            
            

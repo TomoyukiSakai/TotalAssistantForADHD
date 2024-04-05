@@ -36,6 +36,7 @@ struct Concentrate: View {
             }
             
         }
+        .navigationBarBackButtonHidden()
         
     }
 }
